@@ -7,7 +7,7 @@ import { Dropdown } from 'react-bootstrap';
 
 import icon1 from '../assets/images/icon/rain1.svg'
 import icon2 from '../assets/images/icon/rain2.svg'
-import icon3 from '../assets/images/icon/ethe.svg'
+import icon3 from '../assets/images/icon/dai.svg'
 import img from '../assets/images/svg/range-price-dark.svg'
 import CardModal from '../components/layouts/CardModal';
 
@@ -16,7 +16,7 @@ function Explore03(props) {
     const [modalShow, setModalShow] = useState(false);
     return (
         <div>
-            <PageTitle sub='Explore' title='Explore Left Bar' />
+            <PageTitle sub='Explore' title='Explore' />
 
             <section className="tf-explore-sidebar">
                 <div className="tf-container">
@@ -141,12 +141,12 @@ function Explore03(props) {
                                     <h6 className="widget-title">Chains</h6>
                                     <Dropdown>
                                         <Dropdown.Toggle id="dropdown-basic" className=''>
-                                            <div><span className="icon"><i className="fab fa-ethereum"></i></span>Ethereum (ETH)</div>
+                                            <div><span className="icon"><i className="fab fa-ethereum"></i></span>Polygon (MATIC)</div>
                                         </Dropdown.Toggle>
 
                                         <Dropdown.Menu>
                                         <Dropdown.Item href="#">
-                                            <li><span className="icon"><i className="fab fa-ethereum"></i></span><span>Ethereum (ETH)</span></li>
+                                            <li><span className="icon"><i className="fab fa-ethereum"></i></span><span>Polygon (MATIC)</span></li>
                                         </Dropdown.Item>
                                         <Dropdown.Item href="#">
                                             <li><span className="icon"><svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -263,7 +263,7 @@ function Explore03(props) {
                                                 <div className="price">
                                                     <div className="icon"><img src={icon3} alt="images" /></div>
                                                     <div className="content">
-                                                        <div className="name">ETH</div>
+                                                        <div className="name">DAI</div>
                                                         <div className="cash">{idx.price}</div>
                                                     </div>
                                                 </div>

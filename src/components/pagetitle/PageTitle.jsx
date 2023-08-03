@@ -1,17 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import './styles.scss'
 
-PageTitle.propTypes = {
+// PageTitle.propTypes = {
     
-};
+// };
 
 function PageTitle(props) {
-    const {sub} = props;
+    //const {sub} = props;
     const {title} = props;
-    const {none} = props;
+    //const {none} = props;
     return (
         <section className="tf-page-title">    
                 <div className="tf-container">
@@ -20,7 +20,6 @@ function PageTitle(props) {
 
                             <ul className="breadcrumbs">
                                 <li><Link to="/">Home</Link></li>
-                                <li className={none}><Link to="/explore-v1">{sub}</Link></li>
                                 <li>{title}</li>
                             </ul>
 

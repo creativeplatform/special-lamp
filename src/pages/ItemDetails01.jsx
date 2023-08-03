@@ -6,7 +6,7 @@ import avt1 from '../assets/images/author/author-detail-3.png'
 import data from '../assets/fake-data/data-hotpick'
 import icon1 from '../assets/images/icon/rain1.svg'
 import icon2 from '../assets/images/icon/rain2.svg'
-import icon3 from '../assets/images/icon/ethe.svg'
+import icon3 from '../assets/images/icon/dai.svg'
 import CardModal from '../components/layouts/CardModal';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import avtd1 from '../assets/images/author/author-detail-1.png'
@@ -249,7 +249,7 @@ function ItemDetails01() {
                                     <div className="content-bottom">
                                         <div className="heading">
                                             <h6>Top bid</h6>
-                                            <div className="price"><div className="icon"><i className="fab fa-ethereum"></i></div><span>3.52 ETH ($9118.1 USD)</span></div>
+                                            <div className="price"><div className="icon"><i className="fab fa-ethereum"></i></div><span>3.52 DAI ($9118.1 USD)</span></div>
                                         </div>
                                         <div className="button">
                                             <Link to="#" className="tf-button" data-toggle="modal" data-target="#popup_bid">Place your bid</Link>
@@ -306,7 +306,7 @@ function ItemDetails01() {
                                                 <div className="price">
                                                     <div className="icon"><img src={icon3} alt="images" /></div>
                                                     <div className="content">
-                                                        <div className="name">ETH</div>
+                                                        <div className="name">DAI</div>
                                                         <div className="cash">{idx.price}</div>
                                                     </div>
                                                 </div>

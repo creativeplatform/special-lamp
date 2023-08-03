@@ -1,5 +1,5 @@
 import React , {useState} from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 import { Navigation, Scrollbar, A11y   } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -11,11 +11,11 @@ import 'swiper/scss/pagination';
 import { Link } from 'react-router-dom';
 import icon1 from '../../assets/images/icon/rain1.svg'
 import icon2 from '../../assets/images/icon/rain2.svg'
-import icon3 from '../../assets/images/icon/ethe.svg'
+import icon3 from '../../assets/images/icon/dai.svg'
 
-LiveAutions3.propTypes = {
+// LiveAutions3.propTypes = {
     
-};
+// };
 
 function LiveAutions3(props) {
     const {data} = props;

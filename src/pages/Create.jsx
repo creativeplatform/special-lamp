@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import PageTitle from '../components/pagetitle/PageTitle';
 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';

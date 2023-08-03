@@ -1,5 +1,5 @@
 import React , {useState} from 'react';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import icon1 from '../assets/images/svg/icon-create-5.svg'
 import icon2 from '../assets/images/svg/icon-create-6.svg'
 import icon3 from '../assets/images/svg/icon-create-3.svg'
@@ -66,7 +66,6 @@ function HelpCenter(props) {
 
                             <ul className="breadcrumbs">
                                 <li><Link to="/">Home</Link></li>
-                                <li><Link to="#">Pages</Link></li>
                                 <li>Help Center</li>
                             </ul>
                    
@@ -97,7 +96,7 @@ function HelpCenter(props) {
                                     dataHelp.map(idx => (
                                         <div key={idx.id} className="tf-create style-2">
                                             <div className="icon">
-                                                <img src={idx.icon} alt="Binasea" />
+                                                <img src={idx.icon} alt="Creative" />
                                             </div>
                                             <h6 className="title"><Link to="#"> {idx.title}</Link></h6>
                                             <p className="content">{idx.text}</p>

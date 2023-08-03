@@ -9,7 +9,7 @@ import HelpCenter from "./HelpCenter";
 import Home01 from "./Home01";
 import ItemDetails01 from "./ItemDetails01";
 import ItemDetails02 from "./ItemDetails02";
-import LiveAutions02 from "./LiveAutions02";
+import LiveAuctions02 from "./LiveAuctions02";
 import Login from "./Login";
 import Ranking from "./Ranking";
 import SignUp from "./SignUp";
@@ -22,7 +22,7 @@ const routes = [
   { path: '/explore-v3', component: <Explore03 />},
   { path: '/explore-v4', component: <Explore04 />},
   { path: '/collection', component: <Collection />},
-  { path: '/live-auctions-v2', component: <LiveAutions02 />},
+  { path: '/live-auctions-v2', component: <LiveAuctions02 />},
   { path: '/item-details-v1', component: <ItemDetails01 />},
   { path: '/item-details-v2', component: <ItemDetails02 />},
   { path: '/dashboard', component: <Dashboard />},

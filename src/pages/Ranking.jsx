@@ -1,5 +1,5 @@
 import React , {useState} from 'react';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 
 import img1 from '../assets/images/ranking/ranking-1.png'
 import img2 from '../assets/images/ranking/ranking-2.png'
@@ -33,7 +33,7 @@ function Ranking(props) {
             volume: '12,4353',
             h: '+3456%',
             d: '-564%',
-            price: '12,4353 ETH',
+            price: '12,4353 DAI',
             owners: '3.3k',
             assets:'23k'
         },
@@ -44,7 +44,7 @@ function Ranking(props) {
             volume: '12,4353',
             h: '+3456%',
             d: '-564%',
-            price: '12,4353 ETH',
+            price: '12,4353 DAI',
             owners: '3.3k',
             assets:'23k'
         },
@@ -55,7 +55,7 @@ function Ranking(props) {
             volume: '12,4353',
             h: '+3456%',
             d: '-564%',
-            price: '12,4353 ETH',
+            price: '12,4353 DAI',
             owners: '3.3k',
             assets:'23k'
         },
@@ -66,7 +66,7 @@ function Ranking(props) {
             volume: '12,4353',
             h: '+3456%',
             d: '-564%',
-            price: '12,4353 ETH',
+            price: '12,4353 DAI',
             owners: '3.3k',
             assets:'23k'
         },
@@ -77,7 +77,7 @@ function Ranking(props) {
             volume: '12,4353',
             h: '+3456%',
             d: '-564%',
-            price: '12,4353 ETH',
+            price: '12,4353 DAI',
             owners: '3.3k',
             assets:'23k'
         },

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import PageTitle from '../components/pagetitle/PageTitle';
 
 import img1 from '../assets/images/collection/banner-collection.jpg'

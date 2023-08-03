@@ -1,5 +1,5 @@
 import React , {useState} from 'react';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 
 import icon1 from '../assets/images/svg/icon-wallet-1.svg'
 import icon2 from '../assets/images/svg/icon-wallet-2.svg'

@@ -6,7 +6,7 @@ import { Dropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import icon1 from '../../assets/images/icon/rain1.svg'
 import icon2 from '../../assets/images/icon/rain2.svg'
-import icon3 from '../../assets/images/icon/ethe.svg'
+import icon3 from '../../assets/images/icon/dai.svg'
 import CardModal from '../layouts/CardModal';
 
 LiveAuction4.propTypes = {
@@ -136,7 +136,7 @@ function LiveAuction4(props) {
                                                                         <div className="current-bid">
                                                                             <div className="subtitle">Current bid</div>
                                                                             <div className="price">
-                                                                                <span className="cash">5 ETH</span><span className="icon"><img src={icon3} alt="images" /></span>
+                                                                                <span className="cash">5 DAI</span><span className="icon"><img src={icon3} alt="images" /></span>
                                                                             </div>
                                                                         </div>
                                                                     </div>

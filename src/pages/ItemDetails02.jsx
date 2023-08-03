@@ -6,7 +6,7 @@ import avt1 from '../assets/images/author/author-detail-3.png'
 import data from '../assets/fake-data/data-hotpick'
 import icon1 from '../assets/images/icon/rain1.svg'
 import icon2 from '../assets/images/icon/rain2.svg'
-import icon3 from '../assets/images/icon/ethe.svg'
+import icon3 from '../assets/images/icon/dai.svg'
 import CardModal from '../components/layouts/CardModal';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import avtd1 from '../assets/images/author/author-detail-1.png'

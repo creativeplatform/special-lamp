@@ -1,18 +1,18 @@
 import React , {useState} from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 import { Accordion } from 'react-bootstrap-accordion';
 import { Link } from 'react-router-dom';
 import data from '../assets/fake-data/data-hotpick'
 import icon1 from '../assets/images/icon/rain1.svg'
 import icon2 from '../assets/images/icon/rain2.svg'
-import icon3 from '../assets/images/icon/ethe.svg'
+import icon3 from '../assets/images/icon/dai.svg'
 import CardModal from '../components/layouts/CardModal';
 
 
-Faqs.propTypes = {
+// Faqs.propTypes = {
     
-};
+// };
 
 function Faqs(props) {
     const [modalShow, setModalShow] = useState(false);
@@ -54,8 +54,7 @@ function Faqs(props) {
 
                             <ul className="breadcrumbs">
                                 <li><Link to="/">Home</Link></li>
-                                <li><Link to="#">Profile</Link></li>
-                                <li>Add New NFT</li>
+                                <li>FAQs</li>
                             </ul>
                    
                         </div>
@@ -130,7 +129,7 @@ function Faqs(props) {
                                                 <div className="price">
                                                     <div className="icon"><img src={icon3} alt="images" /></div>
                                                     <div className="content">
-                                                        <div className="name">ETH</div>
+                                                        <div className="name">DAI</div>
                                                         <div className="cash">{idx.price}</div>
                                                     </div>
                                                 </div>

@@ -1,7 +1,7 @@
 import React , { useState , useEffect } from 'react';
 import { Link , NavLink } from 'react-router-dom';
 import menus from '../../pages/menu';
-import { Dropdown } from 'react-bootstrap';
+//import { Dropdown } from 'react-bootstrap';
 
 import './styles.scss';
 import logo from '../../assets/images/logo/logo_blk.png';

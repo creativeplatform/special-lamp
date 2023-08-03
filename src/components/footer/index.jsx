@@ -11,78 +11,79 @@ import './styles.scss'
 
 function Footer(props) {
 
-    const [productLink] = useState([
-        {
-            title: 'Spot',
-            path: '/spot'
-        },
-        {
-            title: 'Inverse Perpetual',
-            path: '#'
-        },
-        {
-            title: 'USDT Perpetual',
-            path: '#'
-        },
-        {
-            title: 'Exchange',
-            path: '#'
-        },
-        {
-            title: 'Launchpad',
-            path: '#'
-        },
-        {
-            title: 'Binance Pay',
-            path: '#'
-        },
-    ]);
-    const [servicesLink] = useState([
-        {
-            title: 'Buy Crypto',
-            path: '#'
-        },
-        {
-            title: 'Markets',
-            path: '#'
-        },
-        {
-            title: 'Tranding Fee',
-            path: '#'
-        },
-        {
-            title: 'Affiliate Program',
-            path: '#'
-        },
-        {
-            title: 'Referral Program',
-            path: '#'
-        },
-        {
-            title: 'API',
-            path: '#'
-        },
-    ]);
+    // const [productLink] = useState([
+    //     {
+    //         title: 'Spot',
+    //         path: '/spot'
+    //     },
+    //     {
+    //         title: 'Inverse Perpetual',
+    //         path: '#'
+    //     },
+    //     {
+    //         title: 'USDT Perpetual',
+    //         path: '#'
+    //     },
+    //     {
+    //         title: 'Exchange',
+    //         path: '#'
+    //     },
+    //     {
+    //         title: 'Launchpad',
+    //         path: '#'
+    //     },
+    //     {
+    //         title: 'Binance Pay',
+    //         path: '#'
+    //     },
+    // ]);
+
+    // const [servicesLink] = useState([
+    //     {
+    //         title: 'Buy Crypto',
+    //         path: '#'
+    //     },
+    //     {
+    //         title: 'Markets',
+    //         path: '#'
+    //     },
+    //     {
+    //         title: 'Tranding Fee',
+    //         path: '#'
+    //     },
+    //     {
+    //         title: 'Affiliate Program',
+    //         path: '#'
+    //     },
+    //     {
+    //         title: 'Referral Program',
+    //         path: '#'
+    //     },
+    //     {
+    //         title: 'API',
+    //         path: '#'
+    //     },
+    // ]);
 
 
-    const [listSocial] = useState([
-        {
-            icon: 'icon-facebook-f',
-            path: '#'
-        },
-        {
-            icon: 'icon-instagram',
-            path: '#'
-        },
-        {
-            icon: 'icon-youtube',
-            path: '#'
-        },
-        {
-            icon: 'icon-twitter',
-            path: '#'
-        },
-    ])
+    // const [listSocial] = useState([
+    //     {
+    //         icon: 'icon-facebook-f',
+    //         path: '#'
+    //     },
+    //     {
+    //         icon: 'icon-instagram',
+    //         path: '#'
+    //     },
+    //     {
+    //         icon: 'icon-youtube',
+    //         path: '#'
+    //     },
+    //     {
+    //         icon: 'icon-twitter',
+    //         path: '#'
+    //     },
+    // ])
     
 
     const [isVisible, setIsVisible] = useState(false);
@@ -140,7 +141,7 @@ function Footer(props) {
                                     <ul >
                                         <li><Link to="/explore-v3">Explore</Link></li>
                                         <li><Link to="/item-details-v1">Item Detail</Link></li>
-                                        <li><Link to="/live-auctions-v2">Live Auditon</Link></li>
+                                        <li><Link to="/live-auctions-v2">Live Auctions</Link></li>
                                     </ul>
                                 </div>
                                 <div className="menu menu-2">
@@ -148,14 +149,13 @@ function Footer(props) {
                                     <ul >
                                         <li><Link to="/ranking">Ranking</Link></li>
                                         <li><Link to="/login">Login</Link></li>
-                                        <li><Link to="/create">Create</Link></li>
                                     </ul>
                                 </div>
                                 <div className="menu menu-3">
-                                    <h6 className="widget-title">Resoure</h6>
+                                    <h6 className="widget-title">Resoures</h6>
                                     <ul >
                                         <li><Link to="/help-center">Help and Center</Link></li>
-                                        <li><Link to="/faqs">FaQs</Link></li>
+                                        <li><Link to="/faqs">FAQs</Link></li>
                                     </ul>
                                 </div>
                                 <div className="menu menu-4">

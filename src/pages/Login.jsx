@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import avt1 from '../assets/images/author/author-login-1.png'
 import avt2 from '../assets/images/author/author-login-2.png'

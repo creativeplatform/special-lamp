@@ -38,7 +38,7 @@ function Banner01(props) {
                                     <div className="tf-slider-item">
                                         <div className="content-inner">
                                             <h1 className="heading">
-                                                Create, Tra<span>de</span> & Own the Ne<span>xt</span> Big Thing  
+                                                Create, Tra<span>de &</span> Own the Ne<span>xt Bi</span>g Thing  
                                                 <img src={img1} alt="Creative" />  
                                             </h1>
                                             <p className="sub-heading">{idx.desc}</p>

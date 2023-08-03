@@ -1,5 +1,5 @@
 import React , {useState} from 'react';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import PageTitle from '../components/pagetitle/PageTitle';
 
 import data from '../assets/fake-data/data-hotpick'
@@ -8,13 +8,13 @@ import { Dropdown } from 'react-bootstrap';
 
 import icon1 from '../assets/images/icon/rain1.svg'
 import icon2 from '../assets/images/icon/rain2.svg'
-import icon3 from '../assets/images/icon/ethe.svg'
+import icon3 from '../assets/images/icon/dai.svg'
 import img from '../assets/images/svg/range-price-dark.svg'
 import CardModal from '../components/layouts/CardModal';
 
-Explore04.propTypes = {
+// Explore04.propTypes = {
     
-};
+// };
 
 function Explore04(props) {
 
@@ -146,12 +146,12 @@ function Explore04(props) {
                                     <h6 className="widget-title">Chains</h6>
                                     <Dropdown>
                                         <Dropdown.Toggle id="dropdown-basic" className=''>
-                                            <div><span className="icon"><i className="fab fa-ethereum"></i></span>Ethereum (ETH)</div>
+                                            <div><span className="icon"><i className="fab fa-DAIereum"></i></span>DAIereum (DAI)</div>
                                         </Dropdown.Toggle>
 
                                         <Dropdown.Menu>
                                         <Dropdown.Item href="#">
-                                            <li><span className="icon"><i className="fab fa-ethereum"></i></span><span>Ethereum (ETH)</span></li>
+                                            <li><span className="icon"><i className="fab fa-DAIereum"></i></span><span>DAIereum (DAI)</span></li>
                                         </Dropdown.Item>
                                         <Dropdown.Item href="#">
                                             <li><span className="icon"><svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -268,7 +268,7 @@ function Explore04(props) {
                                                 <div className="price">
                                                     <div className="icon"><img src={icon3} alt="images" /></div>
                                                     <div className="content">
-                                                        <div className="name">ETH</div>
+                                                        <div className="name">DAI</div>
                                                         <div className="cash">{idx.price}</div>
                                                     </div>
                                                 </div>

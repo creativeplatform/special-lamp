@@ -14,7 +14,7 @@ import img2 from '../../assets/images/product/product79.jpg'
 
 import icon1 from '../../assets/images/icon/rain1.svg'
 import icon2 from '../../assets/images/icon/rain2.svg'
-import icon3 from '../../assets/images/icon/ethe.svg'
+import icon3 from '../../assets/images/icon/dai.svg'
 import avt from '../../assets/images/author/author1.png'
 
 Banner06.propTypes = {
@@ -47,7 +47,7 @@ function Banner06(props) {
                                                     <p className="sub-heading">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Integer Nec Odio. Praesent Libero. Sed </p>
                                                     <div className="btn-slider ">
                                                         <Link to="/live-auctions-v1" className="tf-button style-2">Discover now</Link>
-                                                        <Link to="/create" className="tf-button style-9">Creat NFT</Link>
+                                                        <Link to="/create" className="tf-button style-9">Create NFT</Link>
                                                     </div>
                                                 </div>
                                                 <div className="image ani4">
@@ -100,7 +100,7 @@ function Banner06(props) {
                                                                 <div className="bid">
                                                                     <div className="subtitle">Current bid</div>
                                                                     <div className="price">
-                                                                        <span className="cash">5 ETH</span><span className="icon"><img src={icon3} alt="images" /></span>
+                                                                        <span className="cash">5 DAI</span><span className="icon"><img src={icon3} alt="images" /></span>
                                                                     </div>
                                                                 </div>
                                                             </div>
