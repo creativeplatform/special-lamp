@@ -1,5 +1,5 @@
 import React , {useState} from 'react';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 
 import { Navigation, Scrollbar, A11y   } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -79,7 +79,7 @@ function Collection04(props) {
                                     </TabList>
                                     <Dropdown>
                                         <Dropdown.Toggle id="dropdown-basic" className=''>
-                                            Recently create    
+                                            SORT BY    
                                         </Dropdown.Toggle>
 
                                         <Dropdown.Menu>
