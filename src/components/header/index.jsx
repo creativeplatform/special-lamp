@@ -81,22 +81,23 @@ const Header = () => {
                                             ))
                                             
                                         }
-                                        <li className="menu-item">
-                                            <ConnectWallet 
-                                                btnTitle='Link Account'
-                                                modalTitle='Login'
-                                                switchToActiveChain={true}
-                                                dropdownPosition={{
-                                                    side: "bottom", // "top" | "bottom" | "left" | "right";
-                                                    align: "end", // "start" | "center" | "end";
-                                                }}
-                                            />
+                                        <li className="menu-item" >
+                                            <DarkMode />
                                         </li>
                                     </ul>
                                 </nav>
                                </div>
 
                                 <div className="header-right">
+                                <ConnectWallet 
+                                    btnTitle='Link Account'
+                                    modalTitle='Login'
+                                    switchToActiveChain={true}
+                                    dropdownPosition={{
+                                        side: "bottom", // "top" | "bottom" | "left" | "right";
+                                        align: "end", // "start" | "center" | "end";
+                                    }}
+                                />
                                      { address && (
                                         <span className="user">
                                             <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -117,7 +118,7 @@ const Header = () => {
                                             </svg>
                                         </span>
                                      )}
-                                    <DarkMode />
+                                    
                                 </div>  
                                 
                                 
