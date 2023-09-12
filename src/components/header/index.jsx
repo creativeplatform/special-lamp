@@ -1,7 +1,6 @@
 import React , { useState , useEffect } from 'react';
 import { Link , NavLink } from 'react-router-dom';
 import menus from '../../pages/menu';
-//import { Dropdown } from 'react-bootstrap';
 import { ConnectWallet, useAddress } from '@thirdweb-dev/react';
 
 import './styles.scss';
@@ -62,6 +61,7 @@ const Header = () => {
                                                 
                                                 >
                                                     <Link to={data.links}>{data.name}</Link>
+                                                    
                                                     {
                                                         data.namesub &&
                                                         <ul className="sub-menu">
@@ -70,26 +70,33 @@ const Header = () => {
                                                                     <li key={submenu.id} className="menu-item"><NavLink to={submenu.links}>{submenu.sub}</NavLink></li>
                                                                 ))
                                                             }
+                                                            
                                                         </ul>
+                                                        
                                                     }
                                                     
+                                                    
                                                 </li>
+                                                
                                             ))
+                                            
                                         }
+                                        <li className="menu-item">
+                                            <ConnectWallet 
+                                                btnTitle='Link Account'
+                                                modalTitle='Login'
+                                                switchToActiveChain={true}
+                                                dropdownPosition={{
+                                                    side: "bottom", // "top" | "bottom" | "left" | "right";
+                                                    align: "end", // "start" | "center" | "end";
+                                                }}
+                                            />
+                                        </li>
                                     </ul>
                                 </nav>
                                </div>
 
                                 <div className="header-right">
-                                    <ConnectWallet 
-                                    btnTitle='Link Account'
-                                    modalTitle='Login'
-                                    switchToActiveChain={true}
-                                    dropdownPosition={{
-                                        side: "bottom", // "top" | "bottom" | "left" | "right";
-                                        align: "end", // "start" | "center" | "end";
-                                      }}
-                                     />
                                      { address && (
                                         <span className="user">
                                             <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -112,7 +119,8 @@ const Header = () => {
                                      )}
                                     <DarkMode />
                                 </div>  
-
+                                
+                                
                                 <div className={`mobile-button ${menuActive ? 'active' : ''}`} onClick={handleMenuActive}><span></span></div>
                             </div>
                         </div>
