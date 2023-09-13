@@ -15,6 +15,7 @@ import icon1 from '../../assets/images/icon/rain1.svg'
 import icon2 from '../../assets/images/icon/rain2.svg'
 import icon3 from '../../assets/images/icon/dai.svg'
 import { Link } from 'react-router-dom';
+import { MARKETPLACE_ADDRESS } from '../../const/config'
 
 // LiveAuctions.propTypes = {
 //     data : PropTypes.array,
@@ -24,7 +25,7 @@ function LiveAuctions(props) {
     const [modalShow, setModalShow] = useState(false);
     const [timeLefts, setTimeLefts] = useState({}); // Store countdowns for each auction
 
-    const { contract } = useContract("0xa71AB8eE65586BB6e305a98B919f1B83e007A946", "marketplace-v3");
+    const { contract } = useContract(MARKETPLACE_ADDRESS, "marketplace-v3");
     const { data: validEnglishAuctions, isLoading } = useValidEnglishAuctions(contract, { start: 0, count: 100 });
 
     function formatTime(timeLeft = {}) {

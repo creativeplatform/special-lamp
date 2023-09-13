@@ -5,10 +5,11 @@ import truncateEthAddress from 'truncate-eth-address';
 import Spinner from 'react-bootstrap/Spinner';
 import CardModal from '../layouts/CardModal';
 import { Link } from 'react-router-dom';
+import { MARKETPLACE_ADDRESS } from '../../const/config';
 
 function Explore(props) {
 
-    const { contract } = useContract("0xa71AB8eE65586BB6e305a98B919f1B83e007A946", "marketplace-v3");
+    const { contract } = useContract(MARKETPLACE_ADDRESS, "marketplace-v3");
     const { data: validDirectListings, isLoading } = useValidDirectListings(contract, { start: 0, count: 100 });
 
     const [modalShow, setModalShow] = useState(false);
