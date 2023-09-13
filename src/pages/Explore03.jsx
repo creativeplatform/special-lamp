@@ -13,11 +13,12 @@ import icon2 from '../assets/images/icon/rain2.svg'
 import icon3 from '../assets/images/icon/dai.svg'
 import img from '../assets/images/svg/range-price-dark.svg'
 import CardModal from '../components/layouts/CardModal';
+import { MARKETPLACE_ADDRESS } from '../const/config';
 
 function Explore03(props) {
 
     const [modalShow, setModalShow] = useState(false);
-    const { contract } = useContract("0xa71AB8eE65586BB6e305a98B919f1B83e007A946", "marketplace-v3");
+    const { contract } = useContract(MARKETPLACE_ADDRESS, "marketplace-v3");
     const { data: validDirectListings = [], isLoading: isLoadingListings } = useValidDirectListings(contract, { start: 0, count: 8 });
     const { data: validEnglishAuctions = [], isLoading: isLoadingAuctions } = useValidEnglishAuctions(contract, { start:0, count: 8 });
 
