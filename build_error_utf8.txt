@@ -1,0 +1,42 @@
+﻿yarn run v1.22.22
+$ react-scripts build
+Creating an optimized production build...
+node.exe : 
+Browserslist: 
+caniuse-lite is 
+outdated. Please run:
+At C:\Users\g2mus\AppDa
+ta\Roaming\npm\yarn.ps1
+:24 char:5
++     & "node$exe"  "$b
+asedir/node_modules/yar
+n/bin/yarn.js" $args
++     ~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo     
+         : 
+NotSpecified    : 
+(Browserslist: c.    
+..ed. Please run::S    
+tring) [], RemoteEx    
+ception
+    + 
+FullyQualifiedErr    
+orId : NativeComman    
+dError
+ 
+  npx update-browsersli
+st-db@latest
+  Why you should do it 
+regularly: https://gith
+ub.com/browserslist/upd
+ate-db#readme
+Failed to compile.
+
+Module not found: Error: Can't resolve 'wagmi/connectors' in 'C:\Users\g2mus\Developer\special-lamp\node_modules\@account-kit\react\dist\esm'
+
+
+error Command failed 
+with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.

@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, Row, Col, Spinner } from 'react-bootstrap';
-import { 
-    MARKETPLACE_ADDRESS, 
-    NFT_COLLECTION_ADDRESS 
+import {
+    MARKETPLACE_ADDRESS,
+    NFT_COLLECTION_ADDRESS
 } from "../const/addresses";
 import { NFT } from "@thirdweb-dev/sdk";
 import PropTypes from 'prop-types';
@@ -10,32 +10,32 @@ import { ThirdwebNftMedia, useContract, useValidDirectListings, useValidEnglishA
 
 NFTComponent.propTypes = {
     nft: PropTypes.shape(NFT).isRequired,
-  };
+};
 
 export default function NFTComponent({ nft }) {
     const { contract: marketplace, isLoading: loadingMarketplace } = useContract(MARKETPLACE_ADDRESS, "marketplace-v3");
     const { contract: nftContract } = useContract(NFT_COLLECTION_ADDRESS);
-    
+
     const { data: nft, isLoading: loadingNFT, error: nftError } = useNFT(nftContract, nft.metadata.id);
-    
-    const { data: directListing, isLoading: loadingDirectListing } = 
+
+    const { data: directListing, isLoading: loadingDirectListing } =
         useValidDirectListings(marketplace, {
             tokenContract: NFT_COLLECTION_ADDRESS,
             tokenId: nft.metadata.id,
         });
 
-    const { data: auctionListing, isLoading: loadingAuction } = 
+    const { data: auctionListing, isLoading: loadingAuction } =
         useValidEnglishAuctions(marketplace, {
             tokenContract: NFT_COLLECTION_ADDRESS,
             tokenId: nft.metadata.id,
         });
 
-        if (loadingNFT || nftError || !nft) {
-            return <div>NFT not found or loading</div>;
-          }
+    if (loadingNFT || nftError || !nft) {
+        return <div>NFT not found or loading</div>;
+    }
 
     return (
-        <Container style={{ backgroundColor: '#EEE', padding: '20px', borderRadius: '6px', borderWidth: '1px', borderColor: 'lightgray'}}>
+        <Container style={{ backgroundColor: '#EEE', padding: '20px', borderRadius: '6px', borderWidth: '1px', borderColor: 'lightgray' }}>
             <Row>
                 <Col>
                     <div style={{ borderRadius: '4px', overflow: 'hidden' }}>

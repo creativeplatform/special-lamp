@@ -1,4 +1,4 @@
-import React , {useState} from 'react';
+import React, { useState } from 'react';
 import { useContract, useValidDirectListings } from '@thirdweb-dev/react';
 import truncateEthAddress from 'truncate-eth-address';
 // import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
@@ -24,10 +24,10 @@ function Explore(props) {
                         </div>
                     </div>
                     <div className="col-md-12">
-                        {isLoading 
+                        {isLoading
                             ? <div className="d-flex justify-content-center">
-                            <Spinner animation="border" variant="light" role={'status'}><span className="visually-hidden">Loading...</span></Spinner>
-                            </div> 
+                                <Spinner animation="border" variant="light" role={'status'}><span className="visually-hidden">Loading...</span></Spinner>
+                            </div>
                             : <div className="row tf-filter-container wow fadeInUp">
                                 {validDirectListings?.map(idx => (
                                     <div key={idx?.asset?.id} className="col-xl-3 col-lg-4 col-md-6 col-sm-6 tf-loadmore 3d pixel">
@@ -50,7 +50,7 @@ function Explore(props) {
                                         </div>
                                     </div>
                                 ))}
-                              </div>
+                            </div>
                         }
                     </div>
                     <div className="col-md-12">
@@ -60,9 +60,9 @@ function Explore(props) {
                     </div>
                 </div>
             </div>
-            <CardModal 
+            <CardModal
                 show={modalShow}
-                onHide={() => setModalShow(false)} 
+                onHide={() => setModalShow(false)}
             />
         </section>
     );

@@ -1,6 +1,6 @@
-import React , {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 
-import { Navigation, Scrollbar, A11y , Pagination   } from 'swiper';
+import { Navigation, Scrollbar, A11y, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useContract, useValidEnglishAuctions } from "@thirdweb-dev/react";
 import truncateEthAddress from 'truncate-eth-address';
@@ -33,8 +33,8 @@ function LiveAuctions(props) {
         const formattedHours = String(hours).padStart(2, '0');
         const formattedMinutes = String(minutes).padStart(2, '0');
         const formattedSeconds = String(seconds).padStart(2, '0');
-    
-        if(days > 0) {
+
+        if (days > 0) {
             return `${days}d ${formattedHours}h ${formattedMinutes}m ${formattedSeconds}s`;
         }
         return `${formattedHours}h ${formattedMinutes}m ${formattedSeconds}s`;
@@ -42,32 +42,32 @@ function LiveAuctions(props) {
 
     useEffect(() => {
         let localTimers = {};
-    
+
         validEnglishAuctions?.forEach(idx => {
             const endDate = new Date(idx.endTimeInSeconds * 1000);
-            
+
             function updateCountdown() {
                 const now = new Date();
                 const difference = endDate - now;
-    
+
                 if (difference > 0) {
                     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
                     const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                     const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
                     const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-    
+
                     setTimeLefts(prevTimeLefts => ({
                         ...prevTimeLefts,
                         [idx.id]: { days, hours, minutes, seconds }
                     }));
-    
+
                     localTimers[idx.id] = setTimeout(updateCountdown, 1000);
                 }
             }
-    
+
             updateCountdown();
         });
-    
+
         // Cleanup function
         return () => {
             Object.values(localTimers).forEach(timerId => clearTimeout(timerId));
@@ -75,13 +75,13 @@ function LiveAuctions(props) {
     }, [validEnglishAuctions]);
 
     return (
-       
-            <section className="tf-section tf-live-auction visible-sw">
-                <div className="tf-container">
-                {isLoading 
+
+        <section className="tf-section tf-live-auction visible-sw">
+            <div className="tf-container">
+                {isLoading
                     ? <div className="d-flex justify-content-center">
-                    <Spinner animation="border" variant="light" role={'status'}><span className="visually-hidden">Loading...</span></Spinner>
-                    </div> 
+                        <Spinner animation="border" variant="light" role={'status'}><span className="visually-hidden">Loading...</span></Spinner>
+                    </div>
                     :
                     <div className="row">
                         <div className="col-md-12">
@@ -92,91 +92,91 @@ function LiveAuctions(props) {
                         </div>
                         <div className="col-md-12 wow fadeInUp">
 
-                        <Swiper
-                            modules={[Navigation,  Scrollbar, A11y , Pagination ]}
-                            spaceBetween={30}
-                            breakpoints={{
-                                0: {
-                                    slidesPerView: 1,
+                            <Swiper
+                                modules={[Navigation, Scrollbar, A11y, Pagination]}
+                                spaceBetween={30}
+                                breakpoints={{
+                                    0: {
+                                        slidesPerView: 1,
                                     },
-                                767: {
-                                    slidesPerView: 2,
-                                },
-                                991: {
-                                    slidesPerView: 3,
-                                },
-                                1300: {
-                                    slidesPerView: 4,
-                                },
-                            }}
-                            className="live-auction visible"
-                            navigation
-                            loop= {false}
-                            pagination={{
-                                clickable: true,
-                            }}
-                        >
-                        {
-                            validEnglishAuctions?.map(idx => (
-                                    <SwiperSlide key={idx?.id}>
-                                    <div className="slider-item">
-                                            <div className="sc-product style1">
-                                                <div className="top">
-                                                    <Link to="/item-details-v1" className="tag">{idx?.asset?.name}</Link>
-                                                    <div className="wish-list">
-                                                        <Link to="#" className="heart-icon"></Link>
+                                    767: {
+                                        slidesPerView: 2,
+                                    },
+                                    991: {
+                                        slidesPerView: 3,
+                                    },
+                                    1300: {
+                                        slidesPerView: 4,
+                                    },
+                                }}
+                                className="live-auction visible"
+                                navigation
+                                loop={false}
+                                pagination={{
+                                    clickable: true,
+                                }}
+                            >
+                                {
+                                    validEnglishAuctions?.map(idx => (
+                                        <SwiperSlide key={idx?.id}>
+                                            <div className="slider-item">
+                                                <div className="sc-product style1">
+                                                    <div className="top">
+                                                        <Link to="/item-details-v1" className="tag">{idx?.asset?.name}</Link>
+                                                        <div className="wish-list">
+                                                            <Link to="#" className="heart-icon"></Link>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div className="features">
-                                                    <div className="product-media">
-                                                        <img src={idx?.asset?.image} alt="images" />
+                                                    <div className="features">
+                                                        <div className="product-media">
+                                                            <img src={idx?.asset?.image} alt="images" />
+                                                        </div>
+                                                        <div className="featured-countdown">
+                                                            <span className="js-countdown" data-timer={idx?.endTimeInSeconds} data-labels="d, h, m, s ">
+                                                                {timeLefts[idx?.id] ? formatTime(timeLefts[idx?.id]) : "Loading..."}
+                                                            </span>
+                                                        </div>
+                                                        <div className="rain-drop1"><img src={icon1} alt="images" /></div>
+                                                        <div className="rain-drop2"><img src={icon2} alt="images" /></div>
                                                     </div>
-                                                    <div className="featured-countdown">
-                                                        <span className="js-countdown" data-timer={idx?.endTimeInSeconds} data-labels="d, h, m, s ">
-                                                        {timeLefts[idx?.id] ? formatTime(timeLefts[idx?.id]) : "Loading..."}
-                                                        </span>
-                                                    </div>
-                                                    <div className="rain-drop1"><img src={icon1} alt="images" /></div>
-                                                    <div className="rain-drop2"><img src={icon2} alt="images" /></div>
-                                                </div>
-                                                <div className="bottom">
-                                                    <div className="details-product">
-                                                        <div className="author">
-                                                            {/* <div className="avatar">
+                                                    <div className="bottom">
+                                                        <div className="details-product">
+                                                            <div className="author">
+                                                                {/* <div className="avatar">
                                                                 <img src={idx?.} alt="images" />
                                                             </div> */}
-                                                            <div className="content">
-                                                                <div className="position">Creator</div>
-                                                                <div className="name"> <Link to="/item-details-v1">{truncateEthAddress(idx?.creatorAddress)}</Link></div>
+                                                                <div className="content">
+                                                                    <div className="position">Creator</div>
+                                                                    <div className="name"> <Link to="/item-details-v1">{truncateEthAddress(idx?.creatorAddress)}</Link></div>
+                                                                </div>
+                                                            </div>
+                                                            <div className="current-bid">
+                                                                <div className="subtitle">Current bid</div>
+                                                                <div className="price">
+                                                                    <span className="cash">{idx?.minimumBidCurrencyValue?.displayValue} {idx?.minimumBidCurrencyValue?.symbol}</span><span className="icon"><img src={icon3} alt="images" /></span>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <div className="current-bid">
-                                                            <div className="subtitle">Current bid</div>
-                                                            <div className="price">
-                                                                <span className="cash">{idx?.minimumBidCurrencyValue?.displayValue} {idx?.minimumBidCurrencyValue?.symbol}</span><span className="icon"><img src={icon3} alt="images" /></span>
-                                                            </div>
+                                                        <div className="product-button">
+                                                            <Link to='' onClick={() => setModalShow(true)} data-toggle="modal" data-target="#popup_bid" className="tf-button"> <span className="icon-btn-product"></span> Place Bid</Link>
                                                         </div>
+
                                                     </div>
-                                                    <div className="product-button">
-                                                        <Link to='' onClick={() => setModalShow(true)} data-toggle="modal" data-target="#popup_bid" className="tf-button"> <span className="icon-btn-product"></span> Place Bid</Link>
-                                                    </div>
-                
                                                 </div>
                                             </div>
-                                        </div>
-                                </SwiperSlide>
-                            ))
-                        }
-                    </Swiper>
+                                        </SwiperSlide>
+                                    ))
+                                }
+                            </Swiper>
                         </div>
                     </div>
-                    }
-                </div>
-                <CardModal 
-                    show={modalShow}
-                    onHide={() => setModalShow(false)} 
-                />
-            </section>
+                }
+            </div>
+            <CardModal
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+            />
+        </section>
     );
 }
 

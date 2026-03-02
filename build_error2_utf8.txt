@@ -1,0 +1,88 @@
+﻿yarn run v1.22.22
+$ react-scripts build
+Creating an optimized production build...
+node.exe : 
+Browserslist: 
+caniuse-lite is 
+outdated. Please run:
+At C:\Users\g2mus\AppDa
+ta\Roaming\npm\yarn.ps1
+:24 char:5
++     & "node$exe"  "$b
+asedir/node_modules/yar
+n/bin/yarn.js" $args
++     ~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo     
+         : 
+NotSpecified    : 
+(Browserslist: c.    
+..ed. Please run::S    
+tring) [], RemoteEx    
+ception
+    + 
+FullyQualifiedErr    
+orId : NativeComman    
+dError
+ 
+  npx update-browsersli
+st-db@latest
+  Why you should do it 
+regularly: https://gith
+ub.com/browserslist/upd
+ate-db#readme
+[0;33mOne of your 
+dependencies, babel-pre
+set-react-app, is 
+importing the
+"@babel/plugin-proposal
+-private-property-in-ob
+ject" package without
+declaring it in its 
+dependencies. This is 
+currently working 
+because
+"@babel/plugin-proposal
+-private-property-in-ob
+ject" is already in 
+your
+node_modules folder 
+for unrelated reasons, 
+but it [1mmay break 
+at any time[0;33m.
+
+babel-preset-react-app 
+is part of the 
+create-react-app 
+project, [1mwhich
+is not maintianed 
+anymore[0;33m. It is 
+thus unlikely that 
+this bug will
+ever be fixed. Add "@ba
+bel/plugin-proposal-pri
+vate-property-in-object
+" to
+your devDependencies 
+to work around this 
+error. This will make 
+this message
+go away.[0m
+  
+Failed to compile.
+
+Module not found: Error: Can't resolve 'crypto' in 'C:\Users\g2mus\Developer\special-lamp\node_modules\@toruslabs\eccrypto\dist'
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "crypto": require.resolve("crypto-browserify") }'
+	- install 'crypto-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "crypto": false }
+
+
+error Command failed 
+with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.

@@ -3,14 +3,13 @@
   "version": "3.6.3",
   "private": true,
   "dependencies": {
+    "@account-kit/infra": "^4.84.1",
+    "@account-kit/react": "^4.84.1",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@tanstack/react-query": "^5.90.21",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
-    "@thirdweb-dev/chains": "^0.1.50",
-    "@thirdweb-dev/react": "^3.14.40",
-    "@thirdweb-dev/sdk": "^3.10.59",
-    "@thirdweb-dev/wallets": "^1.1.23",
     "aos": "^2.3.4",
     "assert": "^2.0.0",
     "browserify-zlib": "^0.2.0",
@@ -19,9 +18,8 @@
     "faker": "^5.5.3",
     "get-stream": "^8.0.1",
     "http": "yarn:http-browserify",
-    "https": "yarn:https-browserify",
-    "zlib": "yarn:browserify-zlib",
     "http-browserify": "^1.7.0",
+    "https": "yarn:https-browserify",
     "https-browserify": "^1.0.0",
     "react": "^18.0.0",
     "react-bootstrap": "^2.3.0",
@@ -39,7 +37,10 @@
     "swiper": "^8.1.1",
     "truncate-eth-address": "^1.0.2",
     "url": "^0.11.2",
-    "web-vitals": "^2.1.4"
+    "viem": "^2.46.3",
+    "wagmi": "^3.5.0",
+    "web-vitals": "^2.1.4",
+    "zlib": "yarn:browserify-zlib"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -67,7 +68,6 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^7.0.1",
     "patch-package": "^8.0.0",
     "postinstall-postinstall": "^2.1.0"
   }
